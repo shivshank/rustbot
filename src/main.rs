@@ -38,7 +38,7 @@ const DISCORD_ADVERTISING_HOSTNAMES: [&str; 2] = ["discord.me", "discord.gg"];
 // TODO: Should this be an env var or something?
 const DISCORD_RUST_SERVER_INVITE: &str = "/rust-lang";
 
-/// Check if a link is a discord 
+/// Check if a link is a discord invite or similar link
 fn contains_invite_link(content: &str) -> bool {
     // TODO: Check for links within a message's content
     if let Ok(url) = Url::parse(content) {
